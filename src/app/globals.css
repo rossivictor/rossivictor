@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 43, 49, 51;
+  --background-start-rgb: 226, 215, 207;
+  --background-end-rgb: 216, 188, 160;
+
+  --size: clamp(1.4rem, 0.14rem + 5.6vmin, 4.2rem);
+  --gap: calc(var(--size) / 0.7);
+  --duration: 40s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
+.dark {
+  --foreground-rgb: 216, 188, 160;
+  --background-start-rgb: 8, 76, 97;
+  --background-end-rgb: 43, 49, 51;
+
+  .menuItem a, .btn {
+    &::after {
+      background-color: #063742;
+    }
+  }
+
+}
+
+html {
+  background: url('/bg4.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(var(--background-end-rgb), 0.9)
+    )
+    rgba(var(--background-start-rgb), 0.9);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h1 {
+  @apply text-6xl font-bold text-balance;
+  line-height: 4.5rem;
+}
+
+h2 {
+  @apply text-3xl text-balance;
+}
+
+strong {
+  @apply font-bold;
+}
+
+.menuItem {
+  a {
+    position: relative;
+    display: block;
+    transition: 0.5s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FFB45E;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+#switchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+}
+
+#switchLabel {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 40px;
+	height: 20px;
+	background: #D8BCA0;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+#switchLabel:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+#switch:checked + #switchLabel {
+	background-color: #063742;
+}
+
+#switch:checked + #switchLabel:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+#switchLabel:active:after {
+	width: 22px;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  transition: 0.5s;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFB45E;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.btn.btn-image {
+  position: relative;
+
+  .project-label {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &::after {
+      opacity: .9;
+      z-index: 1;
+  }
+
+  &:hover .project-label {
+    opacity: 1;
+  }
+}
+
+section {
+  height: auto;
+  padding: 8rem 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 80rem /* 1280px */;
+  display: flex;
+  flex-direction: column;
+  justify-items: between;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+}
+
+#banner {
+  min-height: 60vh;
+  padding: 8rem 2rem 5rem;
+}
+
+.project-container {
+  margin: 1rem 0;
+  text-align: left;
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.laptop {
+  background: url('/projects/macbook-mockup.png') no-repeat center center;
+  background-size: contain;
+  height: 296px;
+  padding: 20px 94px 33px;
+  width: 600px;
+
+  .laptop__screen {
+    background-color: transparent;
+    background-position: center top;
+    background-size: 100% auto;
+    height: 100%;
+    padding: 0px;
+    transition: all 30s linear;
+    width: 100%;
+
+    &:hover {
+      background-position: bottom center; 
+    }
+  }
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: auto;
+  max-width: 100%;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+
+  img {
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    object-fit: cover;
+  }
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll-x var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+
+.tags {
+  @apply flex flex-row gap-x-2 gap-y-1 flex-wrap;
+}
+
+.tag {
+  @apply text-[10px] px-4 py-1 border rounded-full text-white/90 border-vryellow/25
+}
