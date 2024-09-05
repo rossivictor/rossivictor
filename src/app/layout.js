@@ -1,9 +1,10 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Montserrat } from "next/font/google";
+import { Nunito, Yeseva_One } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ['300', '400', '700'] });
+const sans = Nunito({ subsets: ["latin"], weight: ['300', '400', '700'], variable: '--font-montserrat' });
+const serif = Yeseva_One({ subsets: ["latin"], weight: ['400'], variable: '--font-platypi' });
 
 export const metadata = {
   title: "Victor Rossi - Desenvolvedor front-end",
@@ -13,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <html lang="pt">
-        <body className={`${montserrat.className}`}>
+        <body className={`${serif.variable} ${sans.className}`}>
           <Header />
           {children}
           <Footer />

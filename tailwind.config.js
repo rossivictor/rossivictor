@@ -17,6 +17,10 @@ module.exports = {
         vrblue: "#084C61",
         vryellow: "#FFB45E",
       },
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+        serif: ['var(--font-platypi)'],
+      },
     },
   },
   plugins: [],

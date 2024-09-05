@@ -48,6 +48,11 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { 
+  @apply font-serif;
+}
+
 h1 {
   @apply text-6xl font-bold text-balance;
   line-height: 4.5rem;
@@ -297,4 +302,30 @@ section {
 
 .tag {
   @apply text-[10px] px-4 py-1 border rounded-full text-white/90 border-vryellow/25
+}
+
+.timeline {
+  li {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -11px;
+      left: -11px;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: #FFB45E;
+    }
+  }
+}
+
+#about-me {
+  background-image: url('/bg5.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
