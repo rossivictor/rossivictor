@@ -3,7 +3,7 @@ import React from "react";
 export default function AboutMe() {
     return (
         <section className="py-0" id="about-me">
-            <div className="py-32 bg-vryellow dark:bg-vrblue/90">
+            <div className="py-32 bg-vryellow/90 dark:bg-vrblue/90">
                 <div className="container">
                     <div className="flex flex-row justify-between items-center gap-x-20">
                         <div className="w-5/12">
@@ -37,7 +37,7 @@ export default function AboutMe() {
                             </div>
                         </div>
                     </div>
-                    <ul className="flex flex-row gap-x-10 timeline text-base mt-24 border-t-2 border-vryellow">
+                    <ul className="flex flex-row gap-x-10 timeline text-base mt-24 border-t-2 border-vrblue dark:border-vryellow">
                         <li className="pt-10 mb-20 w-1/5">
                             <strong>2012</strong>
                             <p>Me formei em Marketing em São Paulo/SP e co-fundei uma agência de marketing digital para empresas B2B</p>

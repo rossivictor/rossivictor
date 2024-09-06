@@ -1,7 +1,10 @@
+"use client"
+
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import React from "react";
 import Link from "next/link";
+import { IconContext } from "react-icons";
+import { PiArrowSquareInLight } from "react-icons/pi";
 
 const Project = (props) => {
     const { title, image, wImage, hImage, url, category, technologies, className } = props
@@ -13,9 +16,12 @@ const Project = (props) => {
             {/* <h4 className="font-bold text-black/80 dark:text-white/80 mb-4">{title}/ */}
             <Link className="btn btn-image" href={url} target="_blank" passHref>
                 <Image src={image} alt={`Captura de tela: ${title}`} width={wImage ? wImage : 800} height={hImage ? hImage : 1006} />
-                <div className="project-label flex flex-row align-middle justify-center">
-                    <p className="text-vrblue dark:text-vryellow me-4">acessar projeto</p>
-                    <Image src='/icon-new-tab-y.svg' alt="o link abrirá em uma nova aba" width={15} height={15} />
+                <div className="project-label flex flex-row items-middle justify-center text-vrblue dark:text-vryellow">
+                    <p className="me-2">acessar projeto</p>
+                    <IconContext.Provider value={{ size: "24px" }}>
+                        <PiArrowSquareInLight />
+                    </IconContext.Provider>
+                    {/* <Image src='/icon-new-tab-y.svg' alt="o link abrirá em uma nova aba" width={15} height={15} /> */}
                 </div>
             </Link>
             <div className={`absolute w-full flex flex-col h-auto -mt-20 z-10 pe-4 bottom-0`}>

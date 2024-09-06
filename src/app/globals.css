@@ -301,7 +301,7 @@ section {
 }
 
 .tag {
-  @apply text-[10px] px-4 py-1 border rounded-full text-white/90 border-vryellow/25
+  @apply text-[10px] px-4 py-1 border rounded-full text-white/90 border-vrblue/25 dark:border-vryellow/25;
 }
 
 .timeline {
@@ -317,8 +317,50 @@ section {
       width: 20px;
       height: 20px;
       border-radius: 10px;
-      background: #FFB45E;
+      background-color: #084C61;
     }
+  }
+}
+
+.dark {
+  .timeline {
+    li {
+      &::after {
+        background-color: #FFB45E;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  #banner {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .laptop {
+    height: 148px;
+    padding: 10px 47px 16.5px;
+    width: 300px;
+  }
+
+  .marquee {
+    gap: calc(var(--gap) / 2);
+  }
+
+  .marquee__group {
+    gap: calc(var(--gap) / 2);
+  }
+
+  .tags {
+    gap: 0.5rem;
+  }
+
+  .tag {
+    @apply text-[8px] px-2 py-1;
   }
 }
 
@@ -328,4 +370,8 @@ section {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.theme-loading {
+  visibility: hidden;
 }

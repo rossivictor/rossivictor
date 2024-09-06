@@ -1,12 +1,10 @@
-import Image from "next/image";
 import React from "react";
-import Button from "./Button";
 import Project from "./Project";
 import { projects } from "../data/projects";
 
 export default function Projects() {
     return (
-        <section className="bg-white dark:bg-[#23292b]">
+        <section id="projects" className="bg-white dark:bg-[#23292b]">
             <div className="container">
                 <h2 className="text-4xl font-light leading-loose mb-6">pode reparar:<br />
                     <p className="text-7xl font-bold leading-normal text-vrblue/70 dark:text-vryellow/70"><span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">dedicação</span> e <span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">capricho</span><br />em <span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">cada detalhe</span></p></h2>
@@ -24,10 +22,10 @@ export default function Projects() {
                         />
                     ))}
                 </div>
-                <div className="flex flex-col justify-center gap-4 mt-8">
+                {/* <div className="flex flex-col justify-center gap-4 mt-8">
                     <h4 className="mx-auto text-3xl mb-4 text-vrblue dark:text-vryellow">quer ver mais?</h4>
                     <Button size="large" className="mx-auto">acesse aqui!</Button>
-                </div>
+                </div> */}
             </div>
         </section>
     );
