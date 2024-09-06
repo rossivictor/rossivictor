@@ -4,12 +4,15 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-white dark:bg-[#23292b]">
+        <section id="projects">
             <div className="container">
-                <h2 className="text-4xl font-light leading-loose mb-6">pode reparar:<br />
-                    <p className="text-7xl font-bold leading-normal text-vrblue/70 dark:text-vryellow/70"><span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">dedicação</span> e <span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">capricho</span><br />em <span className="bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100 px-3">cada detalhe</span></p></h2>
-                <p className="font-light text-xl mb-4 leading-9">cada projeto é uma prova do meu <strong>cuidado meticuloso</strong> com o <strong>design</strong> e a <strong>fluidez da informação</strong></p>
-                <div className="grid grid-flow-row grid-cols-2 grid-rows-2 gap-x-4 gap-y-0 my-12">
+                <h2>pode reparar:<br />
+                    <p>
+                        <span className="highlight">dedicação</span> e <span className="highlight">capricho</span><br />em <span className="highlight">cada detalhe</span>
+                    </p>
+                </h2>
+                <p className="subtitle">cada projeto é uma prova do meu <strong>cuidado meticuloso</strong> com o <strong>design</strong> e a <strong>fluidez da informação</strong></p>
+                <div id="projects-grid">
                     {projects.slice(0, 4).map((project) => (
                         <Project
                             key={project.title}

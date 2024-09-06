@@ -19,10 +19,10 @@ export default function Hero() {
   return (
     <div id="banner" className="container">
       <p>olá, visitante &#128075;</p>
-      <h1 className="mb-2 font-serif text-vrblue/70 dark:text-vryellow/70">
+      <h1>
         me chamo <span className="text-vrblue/100 dark:text-vryellow/100 ">Victor Rossi</span>
       </h1>
-      <p className='font-light leading-snug text-3xl text-balance'>sou um desenvolvedor front-end com ótimas noções de design e sólida experiência em marketing</p>
+      <p className='font-light leading-snug text-xl md:text-3xl text-balance'>sou um desenvolvedor front-end com ótimas noções de design e sólida experiência em marketing</p>
 
       <div className="flex flex-row gap-6 mt-8">
         <Button onClick={openModal}>entrar em contato</Button>

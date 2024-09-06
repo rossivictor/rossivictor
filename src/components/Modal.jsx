@@ -13,12 +13,12 @@ export default function Modal() {
     }
 
     return (
-        <div className="modal hidden items-center fixed w-screen h-screen top-0 left-0 z-10 text-center" id="modal">
-            <div className="z-20 absolute w-full h-full top-0 left-0 bg-white/70 dark:bg-black/70" onClick={closeModal}></div>
-            <div className="z-30 relative modal-content h-auto max-w-[768px] mx-auto p-10 bg-vryellow dark:bg-vrblue">
-                <span className="close-button absolute h-10 w-10 rounded-full flex items-center justify-center -top-5 -right-5 text-lg cursor-pointer bg-vryellow dark:bg-vrblue" onClick={closeModal}>&times;</span>
-                <div className="flex md:flex-row justify-evenly mb-10">
-                    <a href="mailto:rossivictor90@gmail.com" className="transition-all md:w-1/2 md:border-e border-black/10 text-vrblue hover:text-vrblue/70 dark:text-vryellow hover:dark:text-vryellow/70">
+        <div className="hidden" id="modal">
+            <div className="modal-overlay" onClick={closeModal}></div>
+            <div className="modal-content">
+                <span className="close" onClick={closeModal}>&times;</span>
+                <div className="flex flex-col md:flex-row justify-center mb-10">
+                    <a href="mailto:rossivictor90@gmail.com" className="transition-all mb-5 md:mb-0 md:w-1/2 md:border-e border-black/10 text-vrblue hover:text-vrblue/70 dark:text-vryellow hover:dark:text-vryellow/70">
                         <IconContext.Provider value={{ size: "4rem", className: "mx-auto" }}>
                             <PiEnvelopeOpenThin />
                         </IconContext.Provider>

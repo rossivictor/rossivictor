@@ -50,16 +50,23 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { 
-  @apply font-serif;
+  @apply font-serif text-vrblue/70 dark:text-vryellow/70;
 }
 
-h1 {
-  @apply text-6xl font-bold text-balance;
-  line-height: 4.5rem;
+h1, .h1 {
+  @apply mb-4 text-5xl md:text-6xl font-bold text-balance leading-[3.8rem]  md:leading-[4.5rem];
 }
 
-h2 {
-  @apply text-3xl text-balance;
+h2, .h2 {
+  @apply text-4xl font-light leading-loose mb-6 text-balance;
+ 
+  p {
+    @apply leading-normal text-5xl md:text-7xl
+  }
+}
+
+h3, .h3 {
+  @apply mb-8;
 }
 
 strong {
@@ -68,6 +75,7 @@ strong {
 
 .menuItem {
   a {
+    @apply text-xs md:text-base font-bold;
     position: relative;
     display: block;
     transition: 0.5s;
@@ -167,17 +175,10 @@ strong {
 }
 
 .btn.btn-image {
-  position: relative;
+  @apply relative;
 
   .project-label {
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.5s;
-    z-index: 2;
-    width: 100%;
+    @apply opacity-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-[0.5s] z-10 w-full;
   }
 
   &::after {
@@ -206,40 +207,19 @@ section {
 }
 
 #banner {
-  min-height: 60vh;
-  padding: 8rem 2rem 5rem;
+  @apply md:min-h-[60vh] pt-32 px-8 pb-20 md:pb-32;
+}
+
+#projects-grid {
+  @apply grid grid-flow-row grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-x-0 md:gap-x-4 gap-y-4 md:gap-y-0 my-12;
 }
 
 .project-container {
-  margin: 1rem 0;
-  text-align: left;
-
-  .project-image {
-    width: 100%;
-    height: auto;
-  }
+  @apply px-2 flex flex-col relative mx-0 my-4 text-start;
 }
 
-.laptop {
-  background: url('/projects/macbook-mockup.png') no-repeat center center;
-  background-size: contain;
-  height: 296px;
-  padding: 20px 94px 33px;
-  width: 600px;
-
-  .laptop__screen {
-    background-color: transparent;
-    background-position: center top;
-    background-size: 100% auto;
-    height: 100%;
-    padding: 0px;
-    transition: all 30s linear;
-    width: 100%;
-
-    &:hover {
-      background-position: bottom center; 
-    }
-  }
+.project-container .project-image {
+  @apply w-full h-auto;
 }
 
 #wrapper {
@@ -304,30 +284,14 @@ section {
   @apply text-[10px] px-4 py-1 border rounded-full text-white/90 border-vrblue/25 dark:border-vryellow/25;
 }
 
-.timeline {
+#timeline {
+  @apply flex flex-col md:flex-row md:gap-x-10 text-base ms-8 md:ms-0 mt-20 md:mt-24 border-s-2 md:border-s-0 md:border-t-2 border-vrblue dark:border-vryellow;
+
   li {
-    position: relative;
+    @apply ps-10 md:ps-0 md:pt-10 mb-12 md:mb-20 w-4/5 md:w-1/5 relative;
 
     &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -11px;
-      left: -11px;
-      width: 20px;
-      height: 20px;
-      border-radius: 10px;
-      background-color: #084C61;
-    }
-  }
-}
-
-.dark {
-  .timeline {
-    li {
-      &::after {
-        background-color: #FFB45E;
-      }
+      @apply content-[''] block absolute -top-[0px] md:-top-[11px] -left-[11px] w-5 h-5 rounded-[10px] bg-vrblue dark:bg-vryellow;
     }
   }
 }
@@ -335,10 +299,6 @@ section {
 @media screen and (max-width: 768px) {
   .container {
     padding: 1.5rem 1rem;
-  }
-
-  #banner {
-    padding: 4rem 1rem 2rem;
   }
 
   .laptop {
@@ -365,13 +325,60 @@ section {
 }
 
 #about-me {
+  @apply py-0 bg-no-repeat bg-center bg-cover bg-fixed;
   background-image: url('/bg5.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #about-me {
+    background-position: -960px 0px;
+  }
 }
 
 .theme-loading {
   visibility: hidden;
+}
+
+#projects {
+  @apply bg-white dark:bg-[#23292b];
+}
+
+.highlight {
+  @apply px-3 bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100
+}
+
+.subtitle {
+  @apply font-light text-xl mb-4 leading-9;
+}
+
+.overlay {
+  @apply pt-32 pb-16 md:pb-20 bg-vryellow/90 dark:bg-vrblue/90;
+}
+
+#skills {
+  @apply flex flex-row justify-around gap-x-10 pt-10 md:pt-0 md:text-right;
+
+  ul {
+    @apply list-none flex flex-row flex-wrap gap-4 justify-start md:justify-end;
+
+    li {
+      @apply py-2 px-4 border text-base uppercase border-black/10 dark:border-white/10;
+    }
+  }
+}
+
+#modal {
+  @apply items-center fixed w-screen h-screen top-0 left-0 z-10 text-center;
+
+  .modal-overlay {
+    @apply z-20 absolute w-full h-full top-0 left-0 bg-white/70 dark:bg-black/70;
+  }
+
+  .modal-content {
+    @apply z-30 relative h-auto max-w-[380px] md:max-w-[700px] mx-auto p-10 bg-vryellow dark:bg-vrblue;
+  }
+
+  .close {
+    @apply absolute h-10 w-10 rounded-full flex items-center justify-center -top-5 -right-5 text-lg cursor-pointer bg-vryellow dark:bg-vrblue
+  }
 }

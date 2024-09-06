@@ -9,11 +9,8 @@ import { PiArrowSquareInLight } from "react-icons/pi";
 const Project = (props) => {
     const { title, image, wImage, hImage, url, category, technologies, className } = props
 
-    // const newTabIcon = theme === 'dark' ? '/icon-new-tab-y.svg' : '/icon-new-tab-b.svg';
-
     return (
-        <div className={`project-container px-2 flex flex-col relative ${className && className}`}>
-            {/* <h4 className="font-bold text-black/80 dark:text-white/80 mb-4">{title}/ */}
+        <div className={`project-container ${className && className}`}>
             <Link className="btn btn-image" href={url} target="_blank" passHref>
                 <Image src={image} alt={`Captura de tela: ${title}`} width={wImage ? wImage : 800} height={hImage ? hImage : 1006} />
                 <div className="project-label flex flex-row items-middle justify-center text-vrblue dark:text-vryellow">
@@ -21,7 +18,6 @@ const Project = (props) => {
                     <IconContext.Provider value={{ size: "24px" }}>
                         <PiArrowSquareInLight />
                     </IconContext.Provider>
-                    {/* <Image src='/icon-new-tab-y.svg' alt="o link abrirá em uma nova aba" width={15} height={15} /> */}
                 </div>
             </Link>
             <div className={`absolute w-full flex flex-col h-auto -mt-20 z-10 pe-4 bottom-0`}>
