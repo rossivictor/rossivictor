@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { Nunito, Yeseva_One } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const sans = Nunito({ subsets: ["latin"], weight: ['300', '400', '700'], variable: '--font-montserrat' });
 const serif = Yeseva_One({ subsets: ["latin"], weight: ['400'], variable: '--font-platypi' });
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         {children}
         <Modal />
         <Footer />
+         <Analytics />
       </body>
     </html>
   );
