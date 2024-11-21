@@ -61,6 +61,11 @@ export default function Header() {
         <li className="menuItem"><a href="#projects" className="text-vrblue dark:text-vryellow" onClick={buttonScroll}>meus projetos</a></li>
         <li className="menuItem"><a href="#about-me" className="text-vrblue dark:text-vryellow" onClick={buttonScroll}>sobre mim</a></li>
         <li className="menuItem"><a href="#" className="text-vrblue dark:text-vryellow" onClick={openModal}>fale comigo</a></li>
+        <li id="switchLanguage">
+          <a href="#" className="text-vrblue dark:text-vryellow">pt</a>
+          <span className="text-vrblue dark:text-vryellow">/</span>
+          <a href="#" className="text-vrblue dark:text-vryellow">en</a>
+        </li>
         <li id="switchContainer">
           <input type="checkbox" id="switch" onChange={switchTheme} checked={theme === 'dark'} />
           <label htmlFor="switch" id="switchLabel">Toggle</label>
