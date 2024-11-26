@@ -1,6 +1,6 @@
-## Olá, eu me chamo Victor Rossi! :wave:
+## Hi, I'm Victor Rossi! :wave:
 
-Sou um **desenvolvedor front-end** com ótimas noções de design e sólida experiência em marketing.
+I'm a **frontend developer** with strong design expertise and extensive experience in marketing. 👨🏻‍💻 🎨 📊
 
 <div style="display: inline_block"><br>
   <img align="center" alt="Javascript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
