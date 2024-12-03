@@ -1,8 +1,11 @@
 "use client";
 
 import Button from "./Button";
+import { useLanguageContext } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguageContext();
+
   const openModal = (e) => {
     e.preventDefault();
     const modal = document.getElementById("modal");
@@ -18,21 +21,20 @@ export default function Hero() {
 
   return (
     <div id="banner" className="container">
-      <p>olá, visitante &#128075;</p>
+      <p>{t("hero.saudation")} &#128075;</p>
       <h1>
-        me chamo{" "}
+        {t("hero.title")}{" "}
         <span className="text-vrblue/100 dark:text-vryellow/100 ">
-          Victor Rossi
+          {t("hero.name")}
         </span>
       </h1>
       <p className="font-light leading-snug text-xl md:text-3xl text-balance">
-        sou um desenvolvedor front-end com ótimas noções de design e sólida
-        experiência em marketing
+        {t("hero.subtitle")}
       </p>
 
       <div className="flex flex-row gap-6 mt-8">
-        <Button onClick={openModal}>entrar em contato</Button>
-        <Button onClick={scrollToProjects}>ver os projetos</Button>
+        <Button onClick={openModal}>{t("hero.cta")}</Button>
+        <Button onClick={scrollToProjects}>{t("hero.btn")}</Button>
       </div>
     </div>
   );

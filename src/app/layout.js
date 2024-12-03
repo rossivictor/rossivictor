@@ -1,6 +1,5 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Modal from "../components/Modal";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { Nunito, Yeseva_One } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -25,47 +24,48 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt" className="theme-loading">
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+    <LanguageProvider>
+      <html lang="pt" className="theme-loading">
+        <head>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon/favicon-16x16.png"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               (function() {
                 const theme = localStorage.getItem('theme') || 'dark';
                 if (theme === 'dark') {
                   document.documentElement.classList.add('dark');
-                }
-                document.documentElement.classList.remove('theme-loading');
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body className={`${serif.variable} ${sans.className}`}>
-        <Header />
-        {children}
-        <Modal />
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
+                  }
+                  document.documentElement.classList.remove('theme-loading');
+                  })();
+                  `,
+            }}
+          />
+        </head>
+        <body className={`${serif.variable} ${sans.className}`}>
+          <ThemeProvider>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

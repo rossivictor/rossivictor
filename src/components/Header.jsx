@@ -1,38 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useThemeContext } from "@/context/ThemeContext";
+import { useLanguageContext } from "@/context/LanguageContext";
 import Image from "next/image";
 
 export default function Header() {
-  // Set the initial theme state based on localStorage
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "dark";
-    }
-    return "dark";
-  });
-
-  // Apply the theme on initial render
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-    applyTheme(savedTheme);
-  }, []);
-
-  const applyTheme = (theme) => {
-    localStorage.setItem("theme", theme);
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  };
-
-  const switchTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    applyTheme(newTheme);
-  };
-
-  useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
+  const { theme, toggleTheme } = useThemeContext();
+  const { t, changeLanguage, language } = useLanguageContext();
 
   const logo =
     theme === "dark"
@@ -67,7 +41,7 @@ export default function Header() {
             className="text-vrblue dark:text-vryellow"
             onClick={buttonScroll}
           >
-            meus projetos
+            {t("header.projects")}
           </a>
         </li>
         <li className="menuItem">
@@ -76,7 +50,7 @@ export default function Header() {
             className="text-vrblue dark:text-vryellow"
             onClick={buttonScroll}
           >
-            sobre mim
+            {t("header.about")}
           </a>
         </li>
         <li className="menuItem">
@@ -85,28 +59,26 @@ export default function Header() {
             className="text-vrblue dark:text-vryellow"
             onClick={openModal}
           >
-            fale comigo
+            {t("header.contact")}
           </a>
         </li>
-        {/* <li id="switchLanguage">
-          <a href="#" className="text-vrblue dark:text-vryellow">
-            pt
-          </a>
-          <span className="text-vrblue dark:text-vryellow">/</span>
-          <a href="#" className="text-vrblue dark:text-vryellow">
-            en
-          </a>
-        </li> */}
-        <li id="switchContainer">
-          <input
-            type="checkbox"
-            id="switch"
-            onChange={switchTheme}
-            checked={theme === "dark"}
-          />
-          <label htmlFor="switch" id="switchLabel">
-            Toggle
-          </label>
+        <li id="switchLanguage">
+          {language === "pt" && (
+            <button
+              onClick={() => changeLanguage("en")}
+              disabled={language === "en"}
+            >
+              🇬🇧 / 🇺🇸
+            </button>
+          )}
+          {language === "en" && (
+            <button
+              onClick={() => changeLanguage("pt")}
+              disabled={language === "pt"}
+            >
+              🇧🇷 / 🇵🇹
+            </button>
+          )}
         </li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguageContext } from "@/context/LanguageContext";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -17,6 +18,7 @@ const Project = (props) => {
     technologies,
     className,
   } = props;
+  const { t } = useLanguageContext();
 
   return (
     <div className={`project-container ${className && className}`}>
@@ -28,7 +30,7 @@ const Project = (props) => {
           height={hImage ? hImage : 1006}
         />
         <div className="project-label flex flex-row items-middle justify-center text-vrblue dark:text-vryellow">
-          <p className="me-2">acessar projeto</p>
+          <p className="me-2">{t("projects.btnLabel")}</p>
           <IconContext.Provider value={{ size: "24px" }}>
             <PiArrowSquareInLight />
           </IconContext.Provider>

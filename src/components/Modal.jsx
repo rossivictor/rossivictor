@@ -3,8 +3,11 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { PiEnvelopeOpenThin, PiWhatsappLogoThin } from "react-icons/pi";
+import { useLanguageContext } from "@/context/LanguageContext";
 
 export default function Modal() {
+  const { t } = useLanguageContext();
+
   const closeModal = (e) => {
     e.preventDefault();
     const modal = document.getElementById("modal");
@@ -29,7 +32,7 @@ export default function Modal() {
             >
               <PiEnvelopeOpenThin />
             </IconContext.Provider>
-            enviar um e-mail
+            {t("modal.sendEmail")}
           </a>
           <a
             href="https://wa.me/5518998107550"
@@ -41,11 +44,11 @@ export default function Modal() {
             >
               <PiWhatsappLogoThin />
             </IconContext.Provider>
-            chamar no WhatsApp
+            {t("modal.whatsApp")}
           </a>
         </div>
         <div className="text-sm">
-          <p>outras formas de entrar em contato ou saber mais sobre mim:</p>
+          <p>{t("modal.text")}</p>
           <div className="flex flex-row justify-center gap-x-4 py-2">
             <a
               target="_blank"
