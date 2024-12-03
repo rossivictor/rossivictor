@@ -88,7 +88,7 @@ export default function Header() {
             fale comigo
           </a>
         </li>
-        <li id="switchLanguage">
+        {/* <li id="switchLanguage">
           <a href="#" className="text-vrblue dark:text-vryellow">
             pt
           </a>
@@ -96,7 +96,7 @@ export default function Header() {
           <a href="#" className="text-vrblue dark:text-vryellow">
             en
           </a>
-        </li>
+        </li> */}
         <li id="switchContainer">
           <input
             type="checkbox"

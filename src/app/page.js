@@ -1,7 +1,7 @@
-import Hero from "../../components/Hero";
-import AppsSlider from "../../components/AppsSlider";
-import Projects from "../../components/Projects";
-import AboutMe from "../../components/AboutMe";
+import Hero from "../components/Hero";
+import AppsSlider from "../components/AppsSlider";
+import Projects from "../components/Projects";
+import AboutMe from "../components/AboutMe";
 
 export default function Home() {
   return (

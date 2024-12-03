@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { Nunito, Yeseva_One } from "next/font/google";
