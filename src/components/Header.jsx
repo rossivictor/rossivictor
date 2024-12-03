@@ -62,6 +62,17 @@ export default function Header() {
             {t("header.contact")}
           </a>
         </li>
+        <li id="switchContainer">
+          <input
+            type="checkbox"
+            id="switch"
+            onChange={toggleTheme}
+            checked={theme === "dark"}
+          />
+          <label htmlFor="switch" id="switchLabel">
+            Toggle
+          </label>
+        </li>
         <li id="switchLanguage">
           {language === "pt" && (
             <button
