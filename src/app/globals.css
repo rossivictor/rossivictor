@@ -19,16 +19,16 @@
   --background-start-rgb: 8, 76, 97;
   --background-end-rgb: 43, 49, 51;
 
-  .menuItem a, .btn {
+  .menuItem a,
+  .btn {
     &::after {
       background-color: #063742;
     }
   }
-
 }
 
 html {
-  background: url('/bg4.jpg') no-repeat center center fixed;
+  background: url("/bg4.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -48,24 +48,37 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 { 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   @apply font-serif text-vrblue/70 dark:text-vryellow/70;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   @apply mb-4 text-5xl md:text-6xl font-bold text-balance leading-[3.8rem]  md:leading-[4.5rem];
 }
 
-h2, .h2 {
+h2,
+.h2 {
   @apply text-4xl font-light leading-loose mb-6 text-balance;
- 
+
   p {
-    @apply leading-normal text-5xl md:text-7xl
+    @apply leading-normal text-5xl md:text-7xl;
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   @apply mb-8;
 }
 
@@ -87,7 +100,7 @@ strong {
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #FFB45E;
+      background-color: #ffb45e;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.5s;
@@ -105,7 +118,7 @@ strong {
   justify-content: center;
   align-items: center;
 
-  input[type=checkbox] {
+  input[type="checkbox"] {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -113,39 +126,39 @@ strong {
 }
 
 #switchLabel {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 40px;
-	height: 20px;
-	background: #D8BCA0;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 40px;
+  height: 20px;
+  background: #d8bca0;
+  display: block;
+  border-radius: 100px;
+  position: relative;
 }
 
 #switchLabel:after {
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: 16px;
-	height: 16px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
 #switch:checked + #switchLabel {
-	background-color: #063742;
+  background-color: #063742;
 }
 
 #switch:checked + #switchLabel:after {
-	left: calc(100% - 2px);
-	transform: translateX(-100%);
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
 }
 
 #switchLabel:active:after {
-	width: 22px;
+  width: 22px;
 }
 
 .btn {
@@ -161,7 +174,7 @@ strong {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFB45E;
+    background-color: #ffb45e;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;
@@ -182,8 +195,8 @@ strong {
   }
 
   &::after {
-      opacity: .9;
-      z-index: 1;
+    opacity: 0.9;
+    z-index: 1;
   }
 
   &:hover .project-label {
@@ -326,7 +339,7 @@ section {
 
 #about-me {
   @apply py-0 bg-no-repeat bg-center bg-cover bg-fixed;
-  background-image: url('/bg5.png');
+  background-image: url("/bg5.png");
 }
 
 @media screen and (max-width: 768px) {
@@ -344,7 +357,7 @@ section {
 }
 
 .highlight {
-  @apply px-3 bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100
+  @apply px-3 bg-vrblue/5 dark:bg-vryellow/5 text-vrblue/100 dark:text-vryellow/100;
 }
 
 .subtitle {
@@ -379,6 +392,6 @@ section {
   }
 
   .close {
-    @apply absolute h-10 w-10 rounded-full flex items-center justify-center -top-5 -right-5 text-lg cursor-pointer bg-vryellow dark:bg-vrblue
+    @apply absolute h-10 w-10 rounded-full flex items-center justify-center -top-5 -right-5 text-lg cursor-pointer bg-vryellow dark:bg-vrblue;
   }
 }

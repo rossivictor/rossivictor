@@ -18,8 +18,8 @@ module.exports = {
         vryellow: "#FFB45E",
       },
       fontFamily: {
-        sans: ['var(--font-montserrat)'],
-        serif: ['var(--font-platypi)'],
+        sans: ["var(--font-montserrat)"],
+        serif: ["var(--font-platypi)"],
       },
     },
   },
