@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="container max-w-5xl w-full text-center mx-auto py-10">
       <p className="text-xs md:text-sm">
-        &copy; 2024 | {t("footer.copyright")} | {t("footer.developedBy")}{" "}
+        &copy; 2025 | {t("footer.copyright")} | {t("footer.developedBy")}{" "}
         <strong>{t("footer.author")}</strong>
       </p>
     </div>
