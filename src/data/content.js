@@ -73,9 +73,6 @@ const translations = {
       text: "or other ways to get in touch or know more about me:",
     },
   },
-
-  // -----------------------------------------------------
-
   pt: {
     general: {
       and: "e",
@@ -137,7 +134,7 @@ const translations = {
       timelineFourthYear:
         "Decidi tirar um período sabático e vivi a experiência de morar em Liverpool/UK, enquanto aprimorava o inglês",
       timelineFifthYear:
-        "De volta ao Brasil, decido me jogar de cabeça na área de desenvolimento - minha verdadeira paixão!",
+        "De volta ao Brasil, decido me jogar de cabeça na área de desenvolvimento - minha verdadeira paixão!",
     },
     footer: {
       copyright: "todos os direitos reservados",
