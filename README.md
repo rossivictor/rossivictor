@@ -16,10 +16,6 @@ I'm a **frontend developer** with strong design expertise and extensive experien
 </div>
 
 <br />
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rossivictor&layout=compact&title_color=333333)](https://github.com/anuraghazra/github-readme-stats)
-  
-  ##
  
 <div> 
   <a href = "mailto:rossivictor90@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
