@@ -1,24 +1,16 @@
-## Hi, I'm Victor Rossi! :wave:
+## Victor Rossi
 
-I'm a **frontend developer** with strong design expertise and extensive experience in marketing. 👨🏻‍💻 🎨 📊
+**Front-end & Product Engineer** — I build web products where growth meets engineering.
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="Javascript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Typescript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="center" alt="Vite" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg">
-  <img align="center" alt="NextJS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg">
-  <img align="center" alt="Tailwind-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
-  <img align="center" alt="Jest" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg">
-  <img align="center" alt="Docker" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-plain.svg">
-</div>
+15 years taking ideas from "why does this matter to the business" all the way to production code: marketing, then product, then front-end. When my title changed, my job didn't.
 
-<br />
- 
-<div> 
-  <a href = "mailto:rossivictor90@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/victorrossi/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-  <a href="https://www.rossivictor.com.br" target="_blank"><img src="https://img.shields.io/badge/-Portfólio-%23CCC?style=for-the-badge&logo=googlechrome&logoColor=gray" target="_blank"></a> 
-</div>
+**Building now:** Kalendas — a shared-finances app for couples (Expo + Supabase), spec-driven with multiple AI agents. Beta in October 2026. Case study coming soon.
+
+**What I do**
+- Product front-end: React, React Native (Expo), Next.js, TypeScript
+- Growth engineering: A/B testing, tracking and attribution, technical SEO, Core Web Vitals
+- AI-native development: spec → agents → review, with Claude Code in the daily loop
+
+**Stack:** TypeScript · React · React Native / Expo · Next.js · Tailwind · Zustand · TanStack Query · Supabase / PostgreSQL · Jest · Python · Docker · Git
+
+[LinkedIn](https://www.linkedin.com/in/victorrossi/) · rossivictor90@gmail.com
