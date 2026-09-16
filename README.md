@@ -11,6 +11,6 @@
 - Growth engineering: A/B testing, tracking and attribution, technical SEO, Core Web Vitals
 - AI-native development: spec → agents → review, with Claude Code in the daily loop
 
-**Stack:** TypeScript · React · React Native / Expo · Next.js · Tailwind · Zustand · TanStack Query · Supabase / PostgreSQL · Jest · Python · Docker · Git
+**Stack:** TypeScript · React · React Native / Expo · Next.js · Tailwind · Zustand · TanStack Query · Supabase / PostgreSQL · Python · Docker · Git
 
 [LinkedIn](https://www.linkedin.com/in/victorrossi/) · rossivictor90@gmail.com
